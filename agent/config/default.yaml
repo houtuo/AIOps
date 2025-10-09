@@ -1,0 +1,45 @@
+# AIOps 代理程序默认配置
+
+# 服务器配置
+server:
+  host: "0.0.0.0"
+  port: 8443
+  debug: false
+
+# 安全配置
+security:
+  # TLS 配置
+  tls_enabled: true
+  cert_file: "config/server.crt"
+  key_file: "config/server.key"
+
+  # JWT 配置
+  jwt_secret: "your-jwt-secret-here"
+  jwt_expire_hours: 24
+
+  # AES 加密密钥
+  aes_key: "your-aes-256-key-here-32-bytes"
+
+# 日志配置
+logging:
+  level: "INFO"
+  file: "logs/aiops-agent.log"
+  max_size: 10485760  # 10MB
+  backup_count: 5
+
+# 执行配置
+execution:
+  timeout: 300  # 命令执行超时时间（秒）
+  max_output_size: 1048576  # 最大输出大小（1MB）
+  temp_dir: "/tmp/aiops"
+
+# 用户切换配置
+user_switch:
+  # Linux 配置
+  linux:
+    sudo_enabled: true
+    su_enabled: true
+
+  # Windows 配置
+  windows:
+    runas_enabled: true
