@@ -11,8 +11,8 @@
    - 配置requirements.txt依赖管理
    - 设置.gitignore和开发环境配置
 
-2. **虚拟环境配置**
-   - 使用现有的conda虚拟环境 (/home/app/project/AIOps/agent/venv)
+2. **Python环境配置**
+   - 使用指定的Python 3.11环境 (/opt/Python3.11)
    - 安装核心依赖包 (Flask/FastAPI, cryptography, requests等)
 
 ### 第二阶段：核心功能开发 (第2-3周)
